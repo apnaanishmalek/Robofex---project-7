@@ -1,0 +1,215 @@
+@import url("https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@600&display=swap");
+* {
+  box-sizing: border-box;
+}
+body {
+  --sb-track-color: #232e33;
+  --sb-thumb-color: #3aaf9b;
+  --sb-size: 8px;
+}
+
+body::-webkit-scrollbar {
+  width: var(--sb-size);
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--sb-track-color);
+  border-radius: 4px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: var(--sb-thumb-color);
+  border-radius: 10px;
+}
+
+@supports not selector(::-webkit-scrollbar) {
+  body {
+    scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
+  }
+}
+* {
+  font-family: "Saira Condensed", sans-serif;
+}
+.navbar{
+  position: fixed;
+  width: 100%;
+  z-index: 111;
+}
+.nav-link {
+  color: white;
+  padding-bottom: 5px;
+  border-bottom: 2px solid transparent;
+}
+.nav-link:hover {
+  border-bottom: 2px solid #3aaf9b;
+  color: #3aaf9b;
+}
+.main {
+  background: url(wp630435-robot-wallpaper.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-y: -100px;
+}
+.s-i {
+  width: 50px;
+  height: 50px;
+  background-color: rgb(41, 37, 37);
+  box-shadow: 0px 3px 5px rgb(0, 247, 255);
+  transition: 0.4s all ease-in-out;
+}
+.s-i:hover {
+  box-shadow: 0px 3px 2px rgba(0, 247, 255, 0.637);
+  transition: 0.2s all ease-in-out;
+  scale: 0.9;
+  cursor: pointer;
+}
+.third-card {
+  border-top: 5px solid #3aaf9b;
+  border-bottom: 5px solid #3aaf9b;
+  box-shadow: 0 0 20px black;
+}
+.third-card:hover{
+  box-shadow: 0 0 20px #3aaf9bab;
+
+}
+.third-button {
+  background-color: rgb(53, 53, 53);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.24);
+  transition: 0.2s all ease-in-out;
+  border: 0;
+}
+.third-button:hover {
+  background-color: #3aaf9b;
+  transition: 0.2s all ease-in-out;
+}
+.fourth-card {
+  transition: 0.3s all ease-in-out;
+  border-bottom: 2px solid #3aaf9b;
+  border-radius: 5px;
+}
+.fourth-card:hover {
+  transition: 0.3s all ease-in-out;
+  scale: 1.05;
+}
+@property --days {
+  syntax: "<integer>";
+  initial-value: 6;
+  inherits: false;
+}
+.six:hover .days {
+  animation: days 0.7s 1 alternate ease-in-out;
+  counter-reset: days var(--days);
+}
+.days::after {
+  content: counter(days);
+}
+@keyframes days {
+  0% {
+    --days: 0;
+  }
+
+  100% {
+    --days: 6;
+  }
+}
+@property --deposit {
+  syntax: "<integer>";
+  initial-value: 54801;
+  inherits: false;
+}
+.six:hover .deposit {
+  animation: deposit 0.7s 1 alternate ease-in-out;
+  counter-reset: deposit var(--deposit);
+}
+.deposit::after {
+  content: counter(deposit);
+}
+@keyframes deposit {
+  0% {
+    --deposit: 0;
+  }
+
+  100% {
+    --deposit: 54801;
+  }
+}
+@property --withdraw {
+  syntax: "<integer>";
+  initial-value: 19639;
+  inherits: false;
+}
+.six:hover .withdraw {
+  animation: withdraw 0.7s 1 alternate ease-in-out;
+  counter-reset: withdraw var(--withdraw);
+}
+.withdraw::after {
+  content: counter(withdraw);
+}
+@keyframes withdraw {
+  0% {
+    --withdraw: 0;
+  }
+
+  100% {
+    --withdraw: 19639;
+  }
+}
+@property --users {
+  syntax: "<integer>";
+  initial-value: 1121;
+  inherits: false;
+}
+.six:hover .users {
+  animation: users 0.7s 1 alternate ease-in-out;
+  counter-reset: users var(--users);
+}
+.users::after {
+  content: counter(users);
+}
+@keyframes users {
+  0% {
+    --users: 0;
+  }
+
+  100% {
+    --users: 1121;
+  }
+}
+.seven-img {
+  transition: 0.3s all ease-in-out;
+  filter: grayscale(5);
+}
+.seven-img:hover {
+  filter: grayscale(0);
+  transition: 0.3s all ease-in-out;
+}
+.footer-p{
+  color: rgba(255, 255, 255, 0.486);
+}
+.footer-p:hover{
+  color: white;
+  cursor: pointer;
+}
+.footer-span{
+  background-color: #3aaf9b;
+  width: 40px;
+  height: 40px;
+  bottom: -0px;
+  left: 0px;
+  opacity: 0;
+  transition: .4s all ease-in-out;
+  border-radius: 50%;
+}
+.footer:hover .footer-span{
+  opacity: 1;
+  transition: .4s all ease-in-out;
+  bottom: -10px;
+}
+.messege-sec{
+  width: 200px;
+  height: 50px;
+  background-color: #3aaf9b;
+  border-radius: 20px 40px 0 0;
+  bottom: 0;
+  right: 5%;
+}
